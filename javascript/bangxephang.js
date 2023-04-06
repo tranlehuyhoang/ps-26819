@@ -7,7 +7,6 @@ bangxephang = () => {
     document.querySelector('.bangxephang').classList.toggle('show')
     sanphamList = [];
     danhsach.innerHTML = '';
-    render();
 }
 
 
@@ -20,17 +19,28 @@ function render() {
         });
         sanphamList.forEach((e, i) => {
             let now = Date.now();
-            let then = new Date(e.thoigian).getTime(); 
+            let then = new Date(e.thoigian).getTime();
             var chil = document.createElement('tr');
             console.log(typeof e.gia)
-            chil.innerHTML =
-                `
-          <td>${i + 1}</td>
-          <td><img src="${e.ten}" alt=""></td>
-          <td>${e.soluong}</td>
-          <td>${formatter.format(e.gia).replace(/(\.\d{2})?$/, '')}</td>
-          <td>${Math.floor((now - then) / 1000)} giây trước</td>
-          `;
+            if (Math.floor((now - then) / 1000) <= 60) {
+                chil.innerHTML =
+                    `
+<td>${i + 1}</td>
+<td><img src="${e.ten}" alt=""></td>
+<td>${e.soluong}</td>
+<td>${formatter.format(e.gia).replace(/(\.\d{2})?$/, '')}</td>
+<td>${Math.floor((now - then) / 1000)} giây trước</td>
+`
+            } else {
+                chil.innerHTML =
+                    `
+  <td>${i + 1}</td>
+  <td><img src="${e.ten}" alt=""></td>
+  <td>${e.soluong}</td>
+  <td>${formatter.format(e.gia).replace(/(\.\d{2})?$/, '')}</td>
+  <td>${Math.floor((now - then) / 1000 / 60)} phút trước</td>
+  `;
+            }
             danhsach.insertBefore(chil, danhsach.firstChild);
         });
         console.log(sanphamList);

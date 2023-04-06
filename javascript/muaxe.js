@@ -7,6 +7,7 @@ function themxe(e) {
     var price = xelamboDivs[e].querySelector('.giaxe h2').textContent;
     xeArray.push({ imgSrc: imgSrc, price: price });
     hienxe()
+
 }
 hienxe = () => {
     var ul = document.querySelector(".cart-list");
