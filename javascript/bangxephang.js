@@ -5,8 +5,7 @@ var sanphamList = [];
 bangxephang = () => {
     console.log('#ffffff')
     document.querySelector('.bangxephang').classList.toggle('show')
-    sanphamList = [];
-    danhsach.innerHTML = '';
+    
 }
 
 
