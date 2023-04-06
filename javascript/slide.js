@@ -29,3 +29,6 @@ function slide(a) {
 
   })
 }
+setInterval(e => {
+  slide()
+}, 400)
