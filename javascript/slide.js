@@ -1,5 +1,4 @@
 let dem = 0;
-console.log(document.querySelectorAll('.mySlides').length)
 
 document.querySelectorAll('.mySlides').forEach((e, i) => {
   if (i == dem) {
@@ -10,7 +9,6 @@ document.querySelectorAll('.mySlides').forEach((e, i) => {
   }
 })
 function slide(a) {
-  console.log(dem)
   if (a > 0) {
     dem++
     if (dem > document.querySelectorAll('.mySlides').length - 1) { dem = 0 }

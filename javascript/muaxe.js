@@ -8,6 +8,7 @@ function themxe(e) {
     xeArray.push({ imgSrc: imgSrc, price: price });
     hienxe()
 
+
 }
 hienxe = () => {
     var ul = document.querySelector(".cart-list");
@@ -89,6 +90,8 @@ thanhtoan = () => {
     taoSanpham(soluong, gia)
     gia = 0
     soluong = 0;
+    alert('Bấm vào Logo để xem thông tin')
+
 
 }
 taoSanpham = (soluong, gia) => {

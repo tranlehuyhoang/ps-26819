@@ -876,7 +876,7 @@ header>ul {
   border-radius: 20px;
   width        : 600px;
   height       : 500px;
-  right        : 0;
+  right        : 15px;
   display      : grid;
   overflow-y   : scroll;
 }
@@ -1006,7 +1006,7 @@ li input[type="number"]:focus {
   padding         : 10px;
   background-color: #ffffff;
   position        : absolute;
-  left            : 0;
+
   border-radius   : 20px;
   top             : 130px;
   overflow-y      : scroll;
