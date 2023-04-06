@@ -866,9 +866,9 @@ header>ul {
   display: block !important;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
-}
+} */
 
 .cart-list {
 
@@ -1025,10 +1025,14 @@ li input[type="number"]:focus {
   margin: 10px 0;
 }
 
+thead>tr>td {
+  padding: 15px !important;
+}
+
 .bangxephang td {
   border    : 0;
   text-align: center;
-  padding   : 15px;
+  padding   : 0 15px;
 }
 
 .bangxephang table {
@@ -1041,30 +1045,93 @@ li input[type="number"]:focus {
   border-radius   : 5px;
   box-shadow      : 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 @keyframes blink {
-  0% { opacity: 1; }
-  50% { opacity: 0.5; }
-  100% { opacity: 1; }
-}
-@keyframes rainbow-blink {
-  0% { background-color: red; }
-  14.28% { background-color: orange; }
-  28.56% { background-color: yellow; }
-  42.84% { background-color: green; }
-  57.12% { background-color: blue; }
-  71.4% { background-color: indigo; }
-  85.68% { background-color: violet; }
-  100% { background-color: red; }
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
-img {
- 
+@keyframes rainbow-blink {
+  0% {
+    background-color: red;
+  }
+
+  14.28% {
+    background-color: orange;
+  }
+
+  28.56% {
+    background-color: yellow;
+  }
+
+  42.84% {
+    background-color: green;
+  }
+
+  57.12% {
+    background-color: blue;
+  }
+
+  71.4% {
+    background-color: indigo;
+  }
+
+  85.68% {
+    background-color: violet;
+  }
+
+  100% {
+    background-color: red;
+  }
 }
+
+img {}
+
 .btn-phu {
   animation: blink 1s ease-in-out infinite;
-  
+
 }
+
 .xephangs {
   animation: blink 1s ease-in-out infinite;
-  cursor: pointer;
+  cursor   : pointer;
+}
+
+.google-btn {
+  background-color   : #ffffff;
+  color              : #757575;
+  border             : 1px solid #757575;
+  border-radius      : 4px;
+  box-shadow         : 0 2px 4px rgba(0, 0, 0, 0.25);
+  font-family        : Arial, sans-serif;
+  font-size          : 14px;
+  font-weight        : bold;
+  padding            : 10px 16px;
+  text-align         : center;
+  text-decoration    : none;
+  display            : inline-block;
+  background-image   : url('https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png');
+  background-repeat  : no-repeat;
+  background-position: right center;
+  background-size    : auto 34px;
+  padding-right      : 36px;
+}
+
+.google-btn:hover {
+  background-color: #f1f1f1;
+  color           : #757575;
+}
+
+.google-btn:active {
+  background-color: #e3e3e3;
+  box-shadow      : none;
 }
