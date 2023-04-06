@@ -1,35 +1,18 @@
-
-var user = JSON.parse(localStorage.getItem('user'))
+var user = JSON.parse(localStorage.getItem('user'));
+var userss = {
+    name: '',
+    photo: ''
+};
 if (user) {
     document.querySelector('.g-signin2').innerHTML =
         `
-<img src="${user.photo}" alt="">
-<div>${user.name}</div>
-`
-    console.log(userss)
+        <img src="${user.photo}" alt="">
+        <div>${user.name}</div>
+        `;
+    userss.name = user.name;
+    userss.photo = user.photo;
 }
-var userss = {
-    name: user.name || '',
-    photo: user.photo || ''
-}
-console.log(userss)
-
-// const firebaseConfig = {
-//     apiKey: "AIzaSyCQ1i7ayjCOy4lnsUwsHWQAORs02YoQntQ",
-//     authDomain: "fir-3b1e0.firebaseapp.com",
-//     projectId: "fir-3b1e0",
-//     storageBucket: "fir-3b1e0.appspot.com",
-//     messagingSenderId: "457136927764",
-//     appId: "1:457136927764:web:b17b0120db7091651f2301",
-//     measurementId: "G-8LW6KBNNJ5"
-// };
-// // Khởi tạo Firebase
-// firebase.initializeApp(firebaseConfig);
-
-// Cấu hình đăng nhập bằng Google
-
-// Đăng ký tài khoản mới
-
+console.log(userss);
 
 // Đăng nhập bằng Google
 function signIn() {
@@ -39,17 +22,16 @@ function signIn() {
         .then((result) => {
             // Đăng nhập thành công
             var user = result.user;
-            console.log(user)
-            userss.name = user.displayName
-            userss.photo = user.photoURL
+            console.log(user);
+            userss.name = user.displayName;
+            userss.photo = user.photoURL;
             alert("Đăng nhập thành công!");
             localStorage.setItem('user', JSON.stringify(userss));
             document.querySelector('.g-signin2').innerHTML =
                 `
-    <img src="${userss.photo}" alt="">
-    <div>${userss.name}</div>
-    `
-
+                <img src="${userss.photo}" alt="">
+                <div>${userss.name}</div>
+                `;
         })
         .catch((error) => {
             // Đăng nhập không thành công
@@ -58,6 +40,7 @@ function signIn() {
             alert(errorMessage);
         });
 }
+
 var database = firebase.database();
 var sanphamRef = database.ref('sanpham');
 
@@ -74,15 +57,14 @@ getTime = () => {
     var currentHour = currentDate.getHours();
     var currentMinute = currentDate.getMinutes();
     var currentSecond = currentDate.getSeconds();
-    return currentYear + '-' + currentMonth + '-' + currentDay + ' ' + currentHour + ':' + currentMinute + ':' + currentSecond
-}
+    return currentYear + '-' + currentMonth + '-' + currentDay + ' ' + currentHour + ':' + currentMinute + ':' + currentSecond;
+};
+
 taoSanpham = () => {
     const coinRef = database.ref(`sanpham/${getTime()}`);
     coinRef.set({
         ten: userss.name,
         sanpham: userss.name,
         thoigian: getTime()
-    })
-
-}
-
+    });
+};
