@@ -7,8 +7,6 @@ function themxe(e) {
     var price = xelamboDivs[e].querySelector('.giaxe h2').textContent;
     xeArray.push({ imgSrc: imgSrc, price: price });
     hienxe()
-
-
 }
 hienxe = () => {
     var ul = document.querySelector(".cart-list");
@@ -26,7 +24,7 @@ hienxe = () => {
         var li = document.createElement("li");
         li.innerHTML = ` 
   <img src="${e.imgSrc}" alt="" />
-  <input type="number" style="width: 100px; height: 100%; font-size: 30px;" name="" id="" value='1' class="inputs">
+  <input type="number" style="width: 100px; height: 100%; font-size: 30px;" name="" id="" value='1' class="inputs" >
   <h4 class = "showgia" style="font-size: 30px;">${e.price}  </h4> <p>USD<p/> <button onclick='huyxe(${i})'>Hủy</button>
   `
         ul.appendChild(li);

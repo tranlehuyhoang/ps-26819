@@ -5,6 +5,9 @@ var sanphamList = [];
 bangxephang = () => {
     console.log('#ffffff')
     document.querySelector('.bangxephang').classList.toggle('show')
+    sanphamList = [];
+    danhsach.innerHTML = '';
+    render();
 }
 
 
@@ -16,6 +19,8 @@ function render() {
             sanphamList.push(sanpham);
         });
         sanphamList.forEach((e, i) => {
+            let now = Date.now();
+            let then = new Date(e.thoigian).getTime(); 
             var chil = document.createElement('tr');
             console.log(typeof e.gia)
             chil.innerHTML =
@@ -24,7 +29,7 @@ function render() {
           <td><img src="${e.ten}" alt=""></td>
           <td>${e.soluong}</td>
           <td>${formatter.format(e.gia).replace(/(\.\d{2})?$/, '')}</td>
-          <td>${e.thoigian}</td>
+          <td>${Math.floor((now - then) / 1000)} giây trước</td>
           `;
             danhsach.insertBefore(chil, danhsach.firstChild);
         });
@@ -38,3 +43,7 @@ sanphamRef.on('value', function (snapshot) {
     danhsach.innerHTML = '';
     render();
 });
+
+ // lấy số giây hiện tại kể từ epoch
+// lấy số giây kể từ epoch đến 06/04/2023 20:45:08 UTC
+ // tính số giây trước đó
