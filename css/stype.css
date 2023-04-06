@@ -1,0 +1,1044 @@
+body {
+  background-image     : url(../img/anh1lambo.jpg);
+  background-repeat    : no-repeat;
+  background-attachment: fixed;
+  background-size      : cover;
+  /* transition        : 2s; */
+}
+
+* {
+  padding   : 0px;
+  margin    : 0px;
+  box-sizing: border-box;
+}
+
+.phune:hover {
+  color: #e84118;
+}
+
+.header-top>.container-fluid {
+  display        : flex;
+  justify-content: space-between;
+}
+
+.header-top {
+  height          : 40px;
+  background-color: black;
+}
+
+.list-header {
+  display: inline-flex;
+}
+
+.list-header>li {
+  list-style: none;
+  color     : var(--mauChu);
+}
+
+.list-header>.mailtime>a {
+  list-style     : none;
+  text-decoration: none;
+  font-size      : 14px;
+  color          : var(--mauChu);
+  line-height    : 40px;
+  margin         : 0px 50px;
+}
+
+.iconheader {
+  display: inline-block;
+}
+
+/* iconn */
+.list-header>.mailtime>ion-icon {
+  color    : var(--mauvang);
+  font-size: 20px;
+  height   : 40px;
+  position : absolute;
+  margin   : 0px 20px;
+}
+
+.gachne {
+  border-right: 1px solid var(--mauChu);
+}
+
+.login>div {
+  display: inline-block;
+}
+
+.login>div>.iconne {
+  text-decoration: none;
+  color          : white;
+  font-size      : 18px;
+  margin         : 10px 3px;
+  display        : block;
+  float          : left;
+}
+
+.login>div>.dangnhapki {
+  text-decoration: none;
+  color          : var(--mauChu);
+  line-height    : 40px;
+  font-size      : 14px;
+  padding        : 0px 20px;
+}
+
+/* csss headertop  */
+.text {
+  color   : #fff;
+  position: absolute;
+  top     : 10px;
+}
+
+header>ul>li {
+  list-style: none;
+}
+
+header>ul {
+  display        : flex;
+  justify-content: space-between;
+}
+
+.logoChinh>img {
+  margin: 20px;
+}
+
+.header-home>li>a {
+  font-weight    : 700;
+  text-decoration: none;
+  color          : #fff;
+  font-size      : 14px;
+}
+
+.header-home>li {
+  text-align : center;
+  display    : inline-block;
+  list-style : none;
+  line-height: 90px;
+  transition : 0.4s;
+}
+
+.btn4 {
+  /* display: inline-block; */
+  padding: 15px 10px;
+
+  border         : 2px solid var(--mauvang);
+  margin-left    : 20px;
+  border-radius  : 10px;
+  box-sizing     : border-box;
+  text-decoration: none;
+  font-family    : "Roboto", sans-serif;
+  font-weight    : 700;
+  color          : #ffffff;
+  text-align     : center;
+  transition     : all 0.2s;
+  font-size      : 14px;
+}
+
+.btn4:hover {
+  color           : rgb(255, 255, 255);
+  /* border       : 2px solid rgb(255, 255, 255); */
+  background-color: var(--mauvang);
+}
+
+/* tim kiem ne   */
+
+.box {
+  margin          : 26px 140px;
+  position        : absolute;
+  background      : #0000005d;
+  border-radius   : 50px;
+  padding         : 10px;
+  transition-delay: 0.2s;
+}
+
+.sbutton>i {
+  color    : var(--mauvang);
+  font-size: 14px;
+}
+
+.sbutton {
+  color          : #e84118;
+  float          : right;
+  width          : 40px;
+  height         : 40px;
+  border-radius  : 50%;
+  /* background  : rgba(255, 255, 255, 0.1); */
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  text-decoration: none;
+  transition     : 0.4s;
+}
+
+.stext {
+  border          : none;
+  background      : none;
+  outline         : none;
+  float           : left;
+  padding         : 0;
+  color           : rgba(85, 85, 85, 0.436);
+  font-size       : 15px;
+  transition      : 0.4s;
+  line-height     : 40px;
+  width           : 0px;
+  transition-delay: 0.2s;
+}
+
+.sbox:hover>.stext {
+  width        : 200px;
+  padding      : 0 5px;
+  border-radius: 50px;
+}
+
+.sbox:hover>.sbutton {
+  background     : rgba(0, 0, 0, 0.61);
+  animation-delay: 1s;
+}
+
+.fa-search {
+  color: #001eff;
+}
+
+.header-nha>li {
+  text-decoration: none;
+  list-style     : none;
+  float          : left;
+}
+
+.header-phai {
+  display        : flex;
+  justify-content: space-between;
+}
+
+.shopping>a>ion-icon {
+  color    : white;
+  font-size: 22px;
+}
+
+.header-nha {
+  margin     : 0px 20px;
+  display    : inline-block;
+  list-style : none;
+  line-height: 90px;
+}
+
+.shopping {
+  margin-top: 4px;
+}
+
+/* csss hieu ung hover  */
+.header-home {
+  background-color: #00000050;
+  border-radius   : 5px 5px 0 0;
+  line-height     : 50px;
+  cursor          : pointer;
+}
+
+/* csss phan chu headẻ */
+.chuimg {
+  margin : 50px 100px;
+  display: inline-block;
+  width  : 1200px;
+  color  : white;
+  height : 70vh;
+}
+
+.chuto {
+  text-shadow: 5px 5px 5px black;
+  font-size  : 110px;
+  line-height: 120px;
+  transition : 2 0s;
+  cursor     : default;
+  animation  : alternate;
+  transition : 25s;
+}
+
+.chuto:hover {
+  font-size: 130px;
+}
+
+.chunho {
+  margin   : 20px 5px;
+  font-size: 34px;
+}
+
+/* fixmenu */
+.subnav {
+  display: none;
+}
+
+/* .header-home>li:hover .subnav {
+  display: block;
+} */
+
+.header-home>li {
+  position: relative;
+  width   : 120px;
+}
+
+.header-home>li>ul {
+  position        : absolute;
+  background-color: #00000072;
+}
+
+.header-home>li>ul>li {
+  list-style   : none;
+  width        : 120px;
+  border-bottom: 0.5px solid white;
+}
+
+.header-home>li>ul>li>a {
+  text-decoration: none;
+  color          : white;
+  font-size      : 12px;
+}
+
+.header-home>li>ul>li:hover {
+  background-color: #00000094;
+}
+
+/* dnah gia ne  */
+.danhgia {
+  padding-top     : 100px;
+  background-color: #f7f7f7;
+  /* height       : 500px; */
+  display         : flex;
+  justify-content : center;
+}
+
+.danhgia>div {
+  border          : 1px solid rgba(0, 0, 0, 0.13);
+  height          : 300px;
+  width           : 280px;
+  background-color: white;
+  display         : inline-block;
+  padding         : 50px 30px;
+  margin          : 50px 10px;
+  text-align      : center;
+  border-radius   : 10px;
+  box-shadow      : 1px 5px 14.88px 1.12px rgba(0, 0, 0, 0.134);
+}
+
+.danhgia>div>h5 {
+  font-size: 18px;
+  padding  : 15px 0px;
+}
+
+.danhgia>div>p {
+  color    : #9c9c9c;
+  font-size: 14px;
+}
+
+/* slidephan3 ne  */
+.footer {
+  height          : 90vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* height       : 70vh; */
+}
+
+.ftcontact {
+  color           : white;
+  font-size       : xx-large;
+  background-color: rgba(0, 0, 0, 0.7);
+  display         : block;
+  height          : 500px;
+  width           : 400px;
+  padding         : 40px;
+}
+
+.ftcontact h2 {
+  font-size: 20px;
+  padding  : 30px 0px;
+}
+
+.ftcontact p {
+  font-size  : 14px;
+  line-height: 24px;
+}
+
+.ftitem span {
+  font-size: 14px;
+  color    : var(--maunhat);
+}
+
+.ftitem p {
+  font-size: 16px;
+}
+
+.ftitem>ul {
+  display: flex;
+}
+
+.ftitem>ul>li {
+  margin: 20px 12px 12px 0px;
+}
+
+.ftitem>ul>li>a {
+  color              : white;
+  /* background-color: #e84118; */
+  padding            : 8px;
+  border-radius      : 5px;
+  margin-right       : 12px;
+  display            : block;
+  margin-top         : 3px;
+}
+
+.ftitem>ul>li>a>ion-icon {
+  font-size: 28px;
+}
+
+.cam {
+  background-color: var(--cam);
+}
+
+.do {
+  background-color: var(--do);
+}
+
+.xanh {
+  background-color: var(--xanh);
+}
+
+.footer>.container--phu>ul {
+  display        : flex;
+  justify-content: space-between;
+}
+
+/* ft right */
+.ftright {
+  flex: 1;
+}
+
+.ftright>ul {
+  display        : flex;
+  justify-content: space-around;
+  color          : white;
+  font-size      : 30px;
+}
+
+.item-1>a {
+  color: white;
+}
+
+/*  */
+/*  */
+.showxe {
+  background-color: #ececec;
+  /* height       : 100vh; */
+  padding-top     : 50px;
+}
+
+.top-showxe {
+  color     : white;
+  text-align: center;
+}
+
+.top-showxe>span {
+  font-size  : 12px;
+  color      : #868686;
+  font-weight: 600;
+  text-align : center;
+  margin-top : 50px;
+}
+
+.top-showxe>h2 {
+  font-size  : 36px;
+  color      : #323232;
+  font-weight: 700;
+  margin     : 30px 0px;
+}
+
+.xelambo {
+  text-align   : center;
+  border-bottom: 2px solid black;
+  box-shadow   : 1px 1px 10px rgb(151, 151, 150);
+  margin       : 25px;
+  transition   : 0.2s;
+  position     : relative;
+}
+
+/*  */
+.xelambo:hover {
+  border-bottom: 10px solid var(--cam);
+  box-shadow   : 1px 1px 10px var(--cam);
+  margin       : 10px 25px;
+}
+
+.xelambo:hover img {
+  opacity: 1;
+}
+
+.xelambo>img {
+  width           : 100%;
+  height          : 180px;
+  /* padding      : 25px; */
+  border-radius   : 5px 5px 0px 0px;
+  opacity         : 0.8;
+  transition      : 0.2s;
+  /* border-bottom: 3px solid black; */
+}
+
+.xelambo>span {
+  font-size  : 12px;
+  color      : #868686;
+  font-weight: 600;
+  text-align : center;
+  margin-top : 50px;
+}
+
+.xelambo>a {
+  display    : block;
+  color      : #282828;
+  font-size  : 18px;
+  font-weight: 700;
+  padding    : 10px 0px;
+}
+
+.iconshowxe>ion-icon {
+  font-size: 25px;
+  padding  : 5px 10px;
+}
+
+.giaxe {
+  display        : flex;
+  justify-content: space-around;
+  padding-bottom : 10px;
+}
+
+.giaxe ion-icon {
+  font-size: 20px;
+  color    : yellow;
+}
+
+.buttonmuaxe {
+  opacity         : 0;
+  position        : absolute;
+  width           : 100px;
+  height          : 35px;
+  border-radius   : 10px;
+  box-sizing      : border-box;
+  text-decoration : none;
+  font-family     : "Roboto", sans-serif;
+  font-weight     : 700;
+  color           : #ffffff;
+  text-align      : center;
+  transition      : all 0.2s;
+  font-size       : 14px;
+  background-color: var(--cam);
+  top             : 100px;
+  right           : 125px;
+  transition      : 0.5s;
+}
+
+.xelambo:hover .buttonmuaxe {
+  top    : 70px;
+  display: block;
+  opacity: 1;
+}
+
+/* new lambo */
+.newlambo {
+  background-color: #ececec;
+}
+
+.newslambo>h3 {
+  color      : #202020;
+  font-size  : 32px;
+  font-weight: 700;
+  padding-top: 200px;
+}
+
+.newslambo>h2 {
+  color: #202020;
+
+  font-size  : 100px;
+  font-weight: 700;
+  padding-top: 50px;
+  line-height: 100px;
+}
+
+.newslambo>h1 {
+  font-size  : 32px;
+  line-height: 35px;
+  padding    : 10px 0px;
+}
+
+.newslambo>p {
+  font-size  : 18px;
+  font-weight: 300;
+  color      : #202020;
+  line-height: 28px;
+}
+
+.newslambo>time {
+  font-size: 14px;
+  padding  : 20px 0px;
+}
+
+/* btn newlambo  */
+.btn-newlambo {
+  display: inline-flex;
+
+  text-align: center;
+}
+
+.btn-newlambo>a {
+  padding      : 20px 20px;
+  font-size    : 20px;
+  color        : #202020;
+  font-weight  : 400;
+  border-radius: 5px;
+  border       : 1px solid;
+}
+
+.btn-newlambo>a:hover {
+  background-color: #202020;
+  color           : white;
+}
+
+/*  */
+/* 
+
+*/
+.footerend>ul {
+  color: white;
+}
+
+.footerend>ul>h1 {
+  padding    : 30px 0px;
+  font-size  : 20px;
+  font-weight: 700;
+}
+
+.p40 {
+  padding     : 40px 0px;
+  padding-left: 50px;
+}
+
+.footerend>ul>li {
+  font-size    : 14px;
+  margin-bottom: 20px;
+}
+
+.ftinput>form>input {
+  height         : 50px;
+  width          : 356px;
+  border         : none;
+  border-radius  : 10px;
+  box-sizing     : none;
+  text-decoration: none;
+  color          : black;
+  transition     : all 0.2s;
+  font-size      : 14px;
+  padding        : 18px 80px 18px 25px;
+}
+
+.ftbtn {
+  display         : inline-block;
+  width           : 60px;
+  height          : 40px;
+  background-color: #e84118;
+  position        : absolute;
+  top             : 4.5px;
+  left            : 291px;
+  border-radius   : 10px;
+}
+
+.ftinput>form {
+  position: relative;
+}
+
+.ftinput ion-icon {
+  color       : white;
+  font-size   : 25px;
+  padding-left: 17px;
+  padding-top : 8px;
+}
+
+.ftnganhang {
+  width           : 750px;
+  height          : 165px;
+  background-color: rgba(0, 0, 0, 0.7);
+  margin-left     : 40px;
+  border-radius   : 5px;
+}
+
+.nganhang-item>div>p {
+  font-size: 15px;
+  color    : white;
+  padding  : 60px 40px;
+}
+
+.nganhang-item>div>img {
+  padding: 60px 40px;
+}
+
+.backgne {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* quang cao cuoi cung */
+.quangcao-lambo {
+  padding         : 50px 0px;
+  background-color: white;
+}
+
+.quangcao-lambo h1 {
+  /* padding: 86px 0px ; */
+  font-size  : 30px;
+  font-weight: 700;
+  line-height: 40px;
+  padding    : 20px 0px;
+}
+
+.quangcao-lambo time {
+  font-size: 18px;
+  color    : #868686;
+}
+
+.pdquangcao {
+  padding-left: 40px;
+}
+
+.quangcao-lambo .row {
+  padding-top: 30px;
+}
+
+/* btnnnn */
+/* fixxxxx */
+.header-home>li>a {
+  text-shadow: 2px 2px 2px rgb(0, 0, 0);
+  font-size  : 17px;
+}
+
+/* hoverr mau vang */
+.hovervang:hover {
+  color: var(--mauvang) !important;
+}
+
+.hovervang {
+  transition: 0.5s;
+}
+
+/* trang 2  */
+
+.nav {
+  background-color: white;
+  /* height       : 1vh; */
+}
+
+.fs14 {
+  font-size: 14px;
+}
+
+.fs16 {
+  font-size: 16px;
+}
+
+.fs18 {
+  font-size: 18px;
+}
+
+.fs20 {
+  font-size: 20px;
+}
+
+.pd20 {
+  padding: 20px 0px;
+}
+
+.pdl50px {
+  padding-left: 100px;
+}
+
+.pdr50px {
+  padding-right: 100px;
+}
+
+.nav h2 {
+  color      : #202020;
+  font-size  : 34px;
+  font-weight: 500;
+  padding    : 30px 0px;
+}
+
+.nav h1 {
+  font-size     : 76px;
+  color         : #202020;
+  font-weight   : 700;
+  padding-bottom: 20px;
+  line-height   : 75px;
+}
+
+.nav time {
+  color      : #202020;
+  font-size  : 18px;
+  font-weight: 300;
+  margin     : 30px 0px;
+}
+
+.nav h4 {
+  font-size  : 16px;
+  color      : #202020;
+  padding    : 30px 0px;
+  font-weight: 300;
+  line-height: 24px;
+}
+
+.nav h3 {
+  font-size  : 34px;
+  color      : #202020;
+  font-weight: 700;
+  line-height: 34px;
+  text-align : left;
+}
+
+.cangiuaaa {
+  align-items: center;
+}
+
+.cangiuaaa img {
+  width        : 100%;
+  border-radius: 1px;
+  box-shadow   : 3px 3px 10px rgba(0, 0, 0, 0.459);
+}
+
+.padding-row {
+  padding: 50px 0px;
+}
+
+.imgquay {
+  /* transform: rotateY(0); */
+  transition: .3s ease-in-out;
+  width     : 100px;
+}
+
+.hoverquay {
+  overflow: hidden;
+}
+
+.hoverquay:hover .imgquay {
+  /* transform: rotateY(18); */
+  width: 130px;
+}
+
+.header-3 {
+  display         : flex;
+  justify-content : space-between;
+  background-color: rgb(0, 0, 0);
+}
+
+.header-3 li {
+  float     : left;
+  margin-top: 25px;
+  height    : 50px;
+
+}
+
+.header-3 a {
+
+  color    : white;
+  font-size: 18px;
+  padding  : 20px;
+}
+
+.hd-3--left {
+  margin-left: 70px;
+}
+
+.chutrong-3 {}
+
+.prev,
+.next {
+  cursor: pointer;
+
+  width        : 50px;
+  padding      : 16px;
+  color        : rgb(46, 40, 40);
+  font-weight  : bold;
+  font-size    : 18px;
+  transition   : 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select  : none;
+}
+
+.show {
+  display: block !important;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.cart-list {
+
+  padding      : 10px;
+  border-radius: 20px;
+  width        : 600px;
+  height       : 500px;
+  right        : 0;
+  display      : grid;
+  overflow-y   : scroll;
+}
+
+.cart-list>li {
+  display    : flex;
+  height     : 50px;
+  margin     : 10px 0;
+  align-items: center;
+
+}
+
+.cart-list img {
+  width : 100px;
+  height: 50px;
+}
+
+.cart-list li:hover {
+  border-bottom: 5px solid var(--cam);
+  box-shadow   : 1px 1px 10px var(--cam);
+
+  transition: 0.2s;
+}
+
+.cart-list>li h2 {
+  padding: 0 10px;
+
+
+}
+
+
+
+.chutos {
+  color      : rgb(0, 0, 0);
+  text-shadow: 5px 5px 5px black;
+  font-size  : 20px;
+  transition : 2 0s;
+  cursor     : default;
+  animation  : alternate;
+  transition : 25s;
+}
+
+.thanhtoan:hover {
+  opacity: .5;
+
+}
+
+.cart-list li {
+  display         : flex;
+  justify-content : space-between;
+  align-items     : center;
+  margin          : 10px;
+  padding         : 10px;
+  background-color: #f1f1f1;
+  border-radius   : 5px;
+  box-shadow      : 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cart-list li img {
+  max-height  : 100px;
+  margin-right: 10px;
+}
+
+.cart-list li input[type="number"] {
+  text-align  : center;
+  margin-right: 10px;
+}
+
+.cart-list li h4 {
+  font-size: 30px;
+  margin   : 0;
+}
+
+.cart-list li p {
+  margin: 0;
+}
+
+li input[type="number"] {
+  -moz-appearance : textfield;
+  text-align      : center;
+  margin-right    : 10px;
+  border          : none;
+  border-radius   : 5px;
+  box-shadow      : 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: #f1f1f1;
+  font-size       : 5px;
+  appearance      : none;
+  color           : #333;
+  width           : 100px;
+  transition      : all 0.2s ease-in-out;
+}
+
+li input[type="number"]:hover {
+  background-color: #e1e1e1;
+  box-shadow      : 0 0 10px rgba(0, 0, 0, 0.4);
+}
+
+li input[type="number"]:focus {
+  outline         : none;
+  background-color: #fff;
+  box-shadow      : 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+.g-signin2 img {
+  width        : 50px;
+  border-radius: 50%;
+  margin       : 10px;
+}
+
+.g-signin2 {
+  display    : flex;
+  align-items: center;
+
+  flex-direction: column;
+  color         : white;
+  font-size     : 20px;
+
+}
+
+.g-signin2>div {
+  line-height: 0;
+
+}
+
+.bangxephang {
+  width           : 580px;
+  height          : 800px;
+  padding         : 10px;
+  background-color: #ffffff;
+  position        : absolute;
+  left            : 0;
+  border-radius   : 20px;
+  top             : 130px;
+  overflow-y      : scroll;
+}
+
+.bangxephang img {
+  width        : 70px;
+  border-radius: 50%;
+}
+
+.bangxephang {
+  font-size: 20px;
+}
+
+.bangxephang thead {
+  margin: 10px 0;
+}
+
+.bangxephang td {
+  border: 0;
+  text-align: center;
+  padding   : 5px 0;
+}
+
+.bangxephang table {
+  width: 100%;
+}
+
+.bangxephang tr {
+  border: 0;
+  background-color: #f1f1f1;
+  border-radius   : 5px;
+  box-shadow      : 0 0 10px rgba(0, 0, 0, 0.2);
+}

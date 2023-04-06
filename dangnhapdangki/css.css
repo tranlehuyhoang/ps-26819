@@ -1,0 +1,108 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+
+}
+:root{
+    --mauchinh: rgb(38, 196, 232);
+}
+body{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../Parallax/resources/1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+}
+.container{
+    margin-top: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 500px;
+    height: 550px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 5px;
+  align-items: center;
+  /* color: white; */
+}
+form h1{
+    position: relative;
+    margin: 40px 0 60px;
+    padding-bottom: 20px;
+    width: fit-content;
+    font-size: 40px;
+    /* text-align: center; */
+    color: white;
+}
+form h1::before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 5px;
+    background: var(--mauchinh);
+    bottom: 0;
+}
+form button{
+    margin-top: 40px;
+    /* width: 100%;
+    height: 50px; */
+    border: none;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.49);
+    color: white;
+}
+form .form-phu{
+    margin-bottom: 30px;
+    position: relative;
+
+}
+.form-phu input{
+    width: 100%;
+    height: 50px;
+    padding-left: 30px;
+    border: none;
+    border-radius: 2px;
+    background-color:transparent ;
+    border-bottom: 3px solid var(--mauchinh);
+    outline: none;
+    color: white;
+    font-size: 18px;
+}
+.form-phu svg{
+    position: absolute;
+    font-size: 20px;
+    color: white;
+    /* line-height: 45px; */
+}
+.form-phu input::placeholder{
+    color: rgba(255, 255, 255, 0.651);
+    font-size: 14px;
+}
+button:hover a{
+    background-color: white;
+    color: black !important;
+    cursor: pointer;
+}
+button:active{
+    color: black;
+    border-bottom: 4px solid rgb(0, 0, 0);
+    
+}
+a{
+    padding: 11px 185px;
+    word-wrap: none;
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 50px;
+    border: none;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.49);
+    color: white;
+}

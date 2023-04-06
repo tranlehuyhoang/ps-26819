@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PS26819</title>
+  <link rel="icon" href="./img/logochinh.png" sizes="32x32">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./css/scss.scss" />
+  <link rel="stylesheet" href="./js.js" />
+  <link href="https://css.gg/css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/base.css" />
+  <link rel="stylesheet" href="./css/responsive.css" />
+  <link rel="stylesheet" href="./css/stype.css" />
+  <link rel="stylesheet" href="./font/Poppins" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+</head>
+<style>
+  .header-home>li>a {
+    padding: 20px;
+  }
+</style>
+
+<body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v15.0&appId=1279415222888232&autoLogAppEvents=1"
+    nonce="ax5Ks2ae"></script>
+  <div class="header">
+    <!-- header-top -->
+    <div class="header-top">
+      <div class="container-fluid">
+        <ul class="list-header">
+          <li class="mailtime">
+            <ion-icon name="mail-open-outline "></ion-icon>
+            <a class="hovervang" href="#">hoangtlhps26819@fpt.edu.vn</a>
+            <ion-icon name="time-outline  "></ion-icon>
+            <a class="hovervang" href="#">10:00 AM To 5:00 PM</a>
+          </li>
+        </ul>
+
+        <ul class="list-header">
+          <li class="login">
+            <button onclick="signIn()">Đăng nhập bằng Google</button>
+            <div>
+              <a class="iconne" href="#"><ion-icon class="hovervang" name="logo-facebook"></ion-icon></a>
+              <a class="iconne" href="#"><ion-icon class="hovervang" name="logo-twitter"></ion-icon></a>
+              <a class="iconne" href="#"><ion-icon class="hovervang" name="logo-instagram"></ion-icon></a>
+              <a class="iconne" href="#"><ion-icon class="hovervang" name="person-circle-outline"></ion-icon></a>
+              <a class="dangnhapki gachne hovervang" href="./dangnhapdangki/dangnhap.html">LOGIN</a>
+              <a class="dangnhapki hovervang" href="./dangnhapdangki/dangki.html">REGISTER</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- header-bottom -->
+    <div class="header-bot">
+      <div class="container-fluid">
+        <header>
+          <ul>
+            <li class="logoChinh" onclick="bangxephang()">
+              <div class="box">
+                <form class="sbox" action="/search" method="get">
+                  <input class="stext" type="text" name="q" placeholder="Tìm kiếm bài viết..." />
+                  <a class="sbutton" type="submit" href="javascript:void(0);">
+                    <i class="fa fa-search"></i>
+                  </a>
+                </form>
+              </div>
+              <img src="./img/logochinh.png" alt="" />
+            </li>
+            <div class="bangxephang" style="display: none;">
+              <h3 class="heading3" style="display: flex; align-items: center; justify-content: space-between; height: 90px;">
+                <div class="chutos">Bảng xếp hạng</div>
+              </h3>
+              <table>
+                <thead>
+                  <tr> 
+                    <td>Stt</td>
+                    <td>Người mua</td>
+                    <td>Số Lượng</td>
+                    <td>Giá</td>
+                    <td>Thời gian</td>
+                  </tr>
+                </thead>
+                <tbody class="xephang">
+                 
+                </tbody>
+              </table>
+            </div>
+            <li class="header-phai">
+              <ul class="header-home">
+                <li>
+                  <a href="#">HOME</a>
+                </li>
+                <li onclick="showmenu('1')">
+                  <a>INVENTORY </a>
+                  <ul class="subnav subnav1">
+                    <li><a href="#">Inventory List</a></li>
+                    <li><a href="#">Inventory Details</a></li>
+                  </ul>
+                </li>
+                <li onclick="showmenu('2')">
+                  <a>AUDI</a>
+                  <ul class="subnav subnav2">
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Loan Calculator</a></li>
+                    <li><a href="#">Login Page</a></li>
+                  </ul>
+                </li>
+                <li onclick="showmenu('3')">
+                  <a>BLOG</a>
+                  <ul class="subnav subnav3">
+                    <li><a href="#">Our Blog</a></li>
+                    <li><a href="#">Blog Details</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a>DRIVER</a>
+                </li>
+              </ul>
+              <ul class="header-nha">
+
+                <!-- shopppingneeee -->
+                =
+                <!-- <a href="#"><ion-icon class="hovervang" name="bag-handle-outline"></ion-icon></a> -->
+                <div class="cart-list" style="position: absolute; background-color: #ffffff; display: none;">
+                  <h3 class="heading3" style="display: flex; align-items: center; justify-content: space-between;">
+                    <div class="chutos">Shopping cart-list</div>
+
+
+                    <button
+                      style="float: right; display: flex; align-items: center; cursor: pointer; background: #0000005d; border: 0px; padding: 10px; border-radius: 50px;"
+                      class="thanhtoan">thanh
+                      toán</button>
+                  </h3>
+
+                </div>
+
+                <!-- ơ day moi dung ne -->
+
+                <!-- enddd -->
+
+                <li class="btn-phu" style="padding: 10px ;">
+                  <div class="g-signin2" onclick="hiengiohang()" style="cursor: pointer;"></div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </header>
+      </div>
+    </div>
+  </div>
+  <!-- end headerr  -->
+  <!-- toi phan chu  -->
+  <div class="chuimg">
+    <div class="chunho">URUS PERFORMANTE</div>
+    <div class="chuto">FOR BAR RAISERS ONLY</div>
+  </div>
+  <!-- end phan chu  -->
+  <!-- enddd container  -->
+  <div class="showxe">
+    <div class="container--phu">
+      <div class="top-showxe">
+        <span>OUR FEATURED CARS </span>
+        <h2>Latest Released Cars</h2>
+      </div>
+      <!-- xe ne -->
+      <div class="row">
+        <div class="col-4">
+          <div class="xelambo">
+            <img src="./img/lambo6.jpg" alt="" />
+            <a onclick="themxe(0)" style="font-size: 10px; color: #ffffff" class="buttonmuaxe" href="#">BOOK NOW</a>
+            <a href="#">lamboghini</a>
+            <span>Placlder text commonly used detrate</span>
+            <div class="iconshowxe">
+              <ion-icon name="settings-outline"></ion-icon>
+              <ion-icon name="heart-circle-outline"></ion-icon>
+              <ion-icon name="person-circle-outline"></ion-icon>
+            </div>
+            <ul class="giaxe">
+              <li>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+              </li>
+              <li>
+                <span>Total Price</span>
+                <h2 class="a23000">$23000</h2>
+                <p>USD</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="xelambo">
+            <img src="./img/lambo5.jpeg" alt="" />
+            <a onclick="themxe(1)" style="font-size: 10px; color: #ffffff" class="buttonmuaxe" href="#">BOOK NOW</a>
+            <a href="#">lamboghini</a>
+            <span>Placlder text commonly used detrate</span>
+            <div class="iconshowxe">
+              <ion-icon name="settings-outline"></ion-icon>
+              <ion-icon name="heart-circle-outline"></ion-icon>
+              <ion-icon name="person-circle-outline"></ion-icon>
+            </div>
+            <ul class="giaxe">
+              <li>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+              </li>
+              <li>
+                <span>Total Price</span>
+                <h2 class="a23000">$23000</h2>
+                <p>USD</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="xelambo">
+            <img src="./img/anh3lambo.jpg" alt="" />
+            <a onclick="themxe(2)" style="font-size: 10px; color: #ffffff" class="buttonmuaxe" href="#">BOOK NOW</a>
+            <a href="#">lamboghini</a>
+            <span>Placlder text commonly used detrate</span>
+            <div class="iconshowxe">
+              <ion-icon name="settings-outline"></ion-icon>
+              <ion-icon name="heart-circle-outline"></ion-icon>
+              <ion-icon name="person-circle-outline"></ion-icon>
+            </div>
+            <ul class="giaxe">
+              <li>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+
+                <ion-icon name="star-outline"></ion-icon>
+              </li>
+              <li>
+                <span>Total Price</span>
+                <h2 class="a23000">$23000</h2>
+                <p>USD</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-4">
+          <div class="xelambo">
+            <img src="./img/anh2lambo.jpg" alt="" />
+            <a onclick="themxe(3)" style="font-size: 10px; color: #ffffff" class="buttonmuaxe" href="#">BOOK NOW</a>
+            <a href="#">lamboghini</a>
+            <span>Placlder text commonly used detrate</span>
+            <div class="iconshowxe">
+              <ion-icon name="settings-outline"></ion-icon>
+              <ion-icon name="heart-circle-outline"></ion-icon>
+              <ion-icon name="person-circle-outline"></ion-icon>
+            </div>
+            <ul class="giaxe">
+              <li>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+              </li>
+              <li>
+                <span>Total Price</span>
+                <h2 class="a23000">$23000</h2>
+                <p>USD</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="xelambo">
+            <img src="./img/lambo4.jpg" alt="" />
+            <a onclick="themxe(4)" style="font-size: 10px; color: #ffffff" class="buttonmuaxe" href="#">BOOK NOW</a>
+            <a href="#">lamboghini</a>
+            <span>Placlder text commonly used detrate</span>
+            <div class="iconshowxe">
+              <ion-icon name="settings-outline"></ion-icon>
+              <ion-icon name="heart-circle-outline"></ion-icon>
+              <ion-icon name="person-circle-outline"></ion-icon>
+            </div>
+            <ul class="giaxe">
+              <li>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+              </li>
+              <li>
+                <span>Total Price</span>
+                <h2 class="a23000">$23000</h2>
+                <p>USD</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="xelambo">
+            <img src="./img/anh1lambo.jpg" alt="" />
+            <a onclick="themxe(5)" style="font-size: 10px; color: #ffffff" class="buttonmuaxe" href="#">BOOK NOW</a>
+            <a href="#">lamboghini</a>
+            <span>Placlder text commonly used detrate</span>
+            <div class="iconshowxe">
+              <ion-icon name="settings-outline"></ion-icon>
+              <ion-icon name="heart-circle-outline"></ion-icon>
+              <ion-icon name="person-circle-outline"></ion-icon>
+            </div>
+            <ul class="giaxe">
+              <li>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+              </li>
+              <li>
+                <span>Total Price</span>
+                <h2 class="a23000">$23000</h2>
+                <p>USD</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="newlambo">
+    <div class="container--phu">
+      <div class="newslambo">
+        <h2>LAMBORGHINI WORLD</h2>
+        <div class="slideshow-container">
+
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="./img/a1.jpg" alt="" style="width:100%">
+            <div class="text">Caption Text</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="./img/a2.jpg" alt="" style="width:100%">
+            <div class="text">Caption Text</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="./img/a3.jpg" alt="" style="width:100%">
+            <div class="text">Caption Text</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="./img/a4.jpg" alt="" style="width:100%">
+            <div class="text">Caption Text</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="./img/a5.jpg" alt="" style="width:100%">
+            <div class="text">Caption Text</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="./img/a6.jpg" alt="" style="width:100%">
+            <div class="text">Caption Text</div>
+          </div>
+          <div class="mySlides fade">
+            <div class="numbertext"></div>
+            <img src="./img/a7.jpg" alt="" style="width:100%">
+            <div class="text">Caption Text</div>
+          </div>
+
+
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="slide(-1)">&#10094;</a>
+          <a class="next" onclick="slide(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+
+
+  <!--  -->
+  <!--  -->
+  <div class="footer">
+    <div class="container--phu">
+      <ul>
+        <li class="ftcontact">
+          <h2>Contact Us</h2>
+          <p>
+            There are many variations of passaes of orem ipsum available, but
+            the majority have in some form, by ipsum
+          </p>
+          <div class="iconfooter">
+            <div class="ftitem">
+              <ul>
+                <li>
+                  <a class="cam" href="#"><ion-icon name="call-outline"></ion-icon></a>
+                </li>
+                <li>
+                  <span>PHONE NUMBER</span>
+                  <p>0585848709</p>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a class="do" href="#"><ion-icon name="mail-outline"></ion-icon></a>
+                </li>
+                <li>
+                  <span>EMAIL ADDRESS</span>
+                  <p>vHOANG@gmail.com</p>
+                </li>
+              </ul>
+              <ul>
+                <li>
+                  <a class="xanh" href="#"><ion-icon name="paper-plane-outline"></ion-icon></a>
+                </li>
+                <li>
+                  <span>ADDRESS</span>
+                  <p>East 40th Street New York</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <!-- tach -->
+        <li class="ftright">
+          <!--  -->
+          <div class="row p40">
+            <div class="col-3 footerend">
+              <ul>
+                <h1>Our Info</h1>
+                <li>About Us</li>
+                <li>Our Service</li>
+                <li>Our Shop</li>
+                <li>Blog</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+            <div class="col-3 footerend">
+              <ul>
+                <h1>Quick Link</h1>
+                <li>About Us</li>
+                <li>Our Service</li>
+                <li>Our Shop</li>
+                <li>Blog</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+            <div class="col-6 footerend">
+              <ul>
+                <h1>Subscribe Us</h1>
+                <div class="ftinput">
+                  <form action="#">
+                    <input placeholder="Your mail..." type="Your mail..." />
+                    <div class="ftbtn">
+                      <a href="#"><ion-icon name="logo-octocat"></ion-icon></a>
+                    </div>
+                  </form>
+                </div>
+              </ul>
+            </div>
+          </div>
+          <!--  -->
+          <!-- row2 -->
+          <div class="row">
+            <div class="ftnganhang">
+              <div class="row nganhang-item">
+                <div class="col-6">
+                  <p>
+                    We know that honesty and transparency friendly customer
+                    service
+                  </p>
+                </div>
+                <div class="col-6"><img src="./img/ft-1.png" alt="" /></div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <input type="number" style="width: 50px; height: 100%; font-size: 30px;" name="" id="" value='1' step="1">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+  <script src="./javascript/js.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+  <!-- Thêm script của Google -->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <!-- Thay đổi thông tin cấu hình Firebase của bạn ở đây -->
+  <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase.js"></script>
+  <script src="./javascript/database.js"></script>
+  <script src="./javascript/slide.js"></script>
+  <script src="./javascript/giohang.js"></script>
+  <script src="./javascript/muaxe.js"></script>
+  <script>
+    document.querySelectorAll(".a23000").forEach(e => {
+      e.innerHTML = `${Math.floor(Math.random() * (2000000 - 100000 + 1)) + 100000} `
+    })
+  </script>
+  <script src="./javascript/bangxephang.js"></script>
+</body>
+
+</html>

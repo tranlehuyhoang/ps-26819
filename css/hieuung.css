@@ -1,0 +1,18 @@
+.showtotop{
+    opacity: 0;
+}
+.active{
+    animation:showtop 1s ease-in-out 1 forwards ;
+}
+.delay0-2{
+    animation-delay:0.2s !important ;
+}
+.delay0-4{
+    animation-delay:0.4s !important ;
+}
+.delay0-6{
+    animation-delay:0.6s !important ;
+}
+.delay0-8{
+    animation-delay:0.8s !important ;
+}

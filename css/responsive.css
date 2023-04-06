@@ -1,0 +1,39 @@
+.fider{
+    position: fixed;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    box-shadow: 0 10px 15px rgb(25 25 25 / 10%);
+    border-radius: 0;
+    animation: 1000ms ease-in-out 0s normal none 1 running fadeInDown;
+    z-index: 1;
+}
+
+
+/* @media (max-width: 1440px) {
+    .container--phu {
+      max-width: 1000px;
+    }
+ 
+  }
+  @media (min-width: 1280px) {
+    .container--phu {
+      max-width: 900px;
+    }
+  }
+  
+  @media (max-width: 1150px) {
+    .container--phu {
+      max-width: 800px;
+    }
+  
+  @media (max-width: 1150px) {
+   
+  }
+  .container--phu {
+    max-width: 700px;
+  }
+  @media (max-width: 991px) {
+    .container--phu {
+      max-width: 600px;
+    } */
