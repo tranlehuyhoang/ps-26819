@@ -6,7 +6,7 @@ if (user) {
 <img src="${user.photo}" alt="">
 <div>${user.name}</div>
 `
-console.log(userss)
+    console.log(userss)
 }
 var userss = {
     name: user.name || '',
@@ -27,14 +27,14 @@ console.log(userss)
 // firebase.initializeApp(firebaseConfig);
 
 // Cấu hình đăng nhập bằng Google
-var provider = new firebase.auth.GoogleAuthProvider();
-provider.addScope('https://www.googleapis.com/auth/userinfo.email');
 
 // Đăng ký tài khoản mới
 
 
 // Đăng nhập bằng Google
 function signIn() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+    provider.addScope('https://www.googleapis.com/auth/userinfo.email');
     firebase.auth().signInWithPopup(provider)
         .then((result) => {
             // Đăng nhập thành công
