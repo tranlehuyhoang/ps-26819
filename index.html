@@ -515,7 +515,7 @@
       <!-- Modal content -->
       <div class="modal-content">
         <div class="modal-header">
-          <span class="close">&times;</span>
+          <span class="close" onclick="cslose()">&times;</span>
           <h2>Modal Header</h2>
         </div>
         <div class="modal-body">
@@ -529,11 +529,11 @@
   <script>
 
     var modal = document.querySelector("#myModal");
-    console.log('modal', modal)
+
     var btn = document.getElementById("myBtn");
 
     // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
+    var span = document.querySelector(".close");
 
     // When the user clicks on the button, open the modal
 
@@ -542,11 +542,9 @@
       var image = parent.querySelector('img').getAttribute('src'); // Get the src attribute of the img element
       var name = parent.querySelector('.lamborname').textContent; // Get the text content of the lamborname element
       var price = parent.querySelector('.a23000').textContent; // Get the text content of the a23000 element
-      console.log(parent)
-      console.log(image)
-      console.log(name)
-      console.log(price)
+
       modal.style.display = "block";
+      modal.classList.add('modal1')
       document.querySelector('.modal-body').innerHTML =
         ` 
   <img src=${image} alt="" />
@@ -566,14 +564,18 @@
 
 
     // When the user clicks on <span> (x), close the modal
-    span.onclick = function () {
+      cslose =  ()=> {
+      console.log('close')
       modal.style.display = "none";
+      modal.classList.remove('modal1')
     }
 
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {
       if (event.target == modal) {
+        console.log('modal')
         modal.style.display = "none";
+        modal.classList.remove('modal1')
       }
     }
   </script>
