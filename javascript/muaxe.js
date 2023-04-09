@@ -90,7 +90,8 @@ thanhtoan = () => {
     taoSanpham(soluong, gia)
     gia = 0
     soluong = 0;
-
+    xeArray = []
+    hienxe()
 }
 taoSanpham = (soluong, gia) => {
     const coinRef = database.ref(`sanpham/${getTime()}`);
