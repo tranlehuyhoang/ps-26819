@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="./css/base.css" />
   <link rel="stylesheet" href="./css/responsive.css" />
   <link rel="stylesheet" href="./css/stype.css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./font/Poppins" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -47,7 +49,8 @@
 
         <ul class="list-header">
           <li class="login">
-            <button style="padding-right: 100px; cursor: pointer;" class="google-btn" onclick="signIn()">Đăng nhập bằng </button>
+            <button style="padding-right: 100px; cursor: pointer;" class="google-btn" onclick="signIn()">Đăng nhập bằng
+            </button>
             <div>
               <a class="iconne" href="#"><ion-icon class="hovervang" name="logo-facebook"></ion-icon></a>
               <a class="iconne" href="#"><ion-icon class="hovervang" name="logo-twitter"></ion-icon></a>
@@ -55,7 +58,7 @@
               <a class="iconne" href="#"><ion-icon class="hovervang" name="person-circle-outline"></ion-icon></a>
               <a class="dangnhapki gachne hovervang" href="./dangnhapdangki/dangnhap.html">LOGIN</a>
               <a class="dangnhapki hovervang" href="./dangnhapdangki/dangki.html">REGISTER</a>
-           
+
             </div>
           </li>
         </ul>
@@ -67,23 +70,23 @@
         <header>
           <ul>
             <li class="logoChinh" onclick="bangxephang()">
-              <div class="box">
-                <form class="sbox" action="/search" method="get">
-                  <input class="stext" type="text" name="q" placeholder="Tìm kiếm bài viết..." />
-                  <a class="sbutton" type="submit" href="javascript:void(0);">
-                    <i class="fa fa-search"></i>
-                  </a>
-                </form>
+
+              <div class="xephangs avatar indicator" style="margin-left: 20px; margin-top: 40px;">
+                <span class="indicator-item badge badge-secondary" style="font-size: 20px !important;">Đơn hàng
+                  mới…</span>
+                <div class="w-20 h-20 rounded-lg" style="width: 10rem; height: 10rem;">
+                  <img style="width: 200px !important;" src="./img/logochinh.png" alt="" />
+                </div>
               </div>
-              <img class="xephangs" src="./img/logochinh.png" alt="" />
             </li>
             <div class="bangxephang" style="display: none; left: 50px;">
-              <h3 class="heading3" style="display: flex; align-items: center; justify-content: space-between; height: 90px;">
+              <h3 class="heading3"
+                style="display: flex; align-items: center; justify-content: space-between; height: 90px;">
                 <div class="chutos">Bảng xếp hạng</div>
               </h3>
               <table>
                 <thead>
-                  <tr> 
+                  <tr>
                     <td>Stt</td>
                     <td>Người mua</td>
                     <td>Số Lượng</td>
@@ -92,7 +95,7 @@
                   </tr>
                 </thead>
                 <tbody class="xephang">
-                 
+
                 </tbody>
               </table>
             </div>
@@ -130,7 +133,7 @@
               <ul class="header-nha">
 
                 <!-- shopppingneeee -->
-                =
+
                 <!-- <a href="#"><ion-icon class="hovervang" name="bag-handle-outline"></ion-icon></a> -->
                 <div class="cart-list" style="position: absolute; background-color: #ffffff; display: none;">
                   <h3 class="heading3" style="display: flex; align-items: center; justify-content: space-between;">
@@ -179,7 +182,7 @@
           <div class="xelambo">
             <img src="./img/lambo6.jpg" alt="" />
             <a onclick="themxe(0)" style="font-size: 10px; color: #ffffff" class="buttonmuaxe" href="#">BOOK NOW</a>
-            <a href="#">lamboghini</a>
+            <a id="myBtn" onclick="chitiet(this)" class="lamborname">lamboghini</a>
             <span>Placlder text commonly used detrate</span>
             <div class="iconshowxe">
               <ion-icon name="settings-outline"></ion-icon>
@@ -188,11 +191,13 @@
             </div>
             <ul class="giaxe">
               <li>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
+                <div class="rating">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
               </li>
               <li>
                 <span>Total Price</span>
@@ -206,7 +211,7 @@
           <div class="xelambo">
             <img src="./img/lambo5.jpeg" alt="" />
             <a onclick="themxe(1)" style="font-size: 10px; color: #ffffff" class="buttonmuaxe" href="#">BOOK NOW</a>
-            <a href="#">lamboghini</a>
+            <a onclick="chitiet(this)" class="lamborname">lamboghini</a>
             <span>Placlder text commonly used detrate</span>
             <div class="iconshowxe">
               <ion-icon name="settings-outline"></ion-icon>
@@ -215,11 +220,13 @@
             </div>
             <ul class="giaxe">
               <li>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
+                <div class="rating">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
               </li>
               <li>
                 <span>Total Price</span>
@@ -233,7 +240,7 @@
           <div class="xelambo">
             <img src="./img/anh3lambo.jpg" alt="" />
             <a onclick="themxe(2)" style="font-size: 10px; color: #ffffff" class="buttonmuaxe" href="#">BOOK NOW</a>
-            <a href="#">lamboghini</a>
+            <a onclick="chitiet(this)" class="lamborname">lamboghini</a>
             <span>Placlder text commonly used detrate</span>
             <div class="iconshowxe">
               <ion-icon name="settings-outline"></ion-icon>
@@ -242,12 +249,13 @@
             </div>
             <ul class="giaxe">
               <li>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-
-                <ion-icon name="star-outline"></ion-icon>
+                <div class="rating">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
               </li>
               <li>
                 <span>Total Price</span>
@@ -264,7 +272,7 @@
           <div class="xelambo">
             <img src="./img/anh2lambo.jpg" alt="" />
             <a onclick="themxe(3)" style="font-size: 10px; color: #ffffff" class="buttonmuaxe" href="#">BOOK NOW</a>
-            <a href="#">lamboghini</a>
+            <a onclick="chitiet(this)" class="lamborname">lamboghini</a>
             <span>Placlder text commonly used detrate</span>
             <div class="iconshowxe">
               <ion-icon name="settings-outline"></ion-icon>
@@ -273,11 +281,13 @@
             </div>
             <ul class="giaxe">
               <li>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
+                <div class="rating">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
               </li>
               <li>
                 <span>Total Price</span>
@@ -291,7 +301,7 @@
           <div class="xelambo">
             <img src="./img/lambo4.jpg" alt="" />
             <a onclick="themxe(4)" style="font-size: 10px; color: #ffffff" class="buttonmuaxe" href="#">BOOK NOW</a>
-            <a href="#">lamboghini</a>
+            <a onclick="chitiet(this)" class="lamborname">lamboghini</a>
             <span>Placlder text commonly used detrate</span>
             <div class="iconshowxe">
               <ion-icon name="settings-outline"></ion-icon>
@@ -300,11 +310,13 @@
             </div>
             <ul class="giaxe">
               <li>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
+                <div class="rating">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
               </li>
               <li>
                 <span>Total Price</span>
@@ -318,7 +330,7 @@
           <div class="xelambo">
             <img src="./img/anh1lambo.jpg" alt="" />
             <a onclick="themxe(5)" style="font-size: 10px; color: #ffffff" class="buttonmuaxe" href="#">BOOK NOW</a>
-            <a href="#">lamboghini</a>
+            <a onclick="chitiet(this)" class="lamborname">lamboghini</a>
             <span>Placlder text commonly used detrate</span>
             <div class="iconshowxe">
               <ion-icon name="settings-outline"></ion-icon>
@@ -327,11 +339,13 @@
             </div>
             <ul class="giaxe">
               <li>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
-                <ion-icon name="star-outline"></ion-icon>
+                <div class="rating">
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+                </div>
               </li>
               <li>
                 <span>Total Price</span>
@@ -354,37 +368,37 @@
           <div class="mySlides fade">
             <div class="numbertext"></div>
             <img src="./img/a1.jpg" alt="" style="width:100%">
-           
+
           </div>
           <div class="mySlides fade">
             <div class="numbertext"></div>
             <img src="./img/a2.jpg" alt="" style="width:100%">
-           
+
           </div>
           <div class="mySlides fade">
             <div class="numbertext"></div>
             <img src="./img/a3.jpg" alt="" style="width:100%">
-           
+
           </div>
           <div class="mySlides fade">
             <div class="numbertext"></div>
             <img src="./img/a4.jpg" alt="" style="width:100%">
-           
+
           </div>
           <div class="mySlides fade">
             <div class="numbertext"></div>
             <img src="./img/a5.jpg" alt="" style="width:100%">
-           
+
           </div>
           <div class="mySlides fade">
             <div class="numbertext"></div>
             <img src="./img/a6.jpg" alt="" style="width:100%">
-           
+
           </div>
           <div class="mySlides fade">
             <div class="numbertext"></div>
             <img src="./img/a7.jpg" alt="" style="width:100%">
-           
+
           </div>
 
 
@@ -507,10 +521,74 @@
         </li>
       </ul>
     </div>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="close">&times;</span>
+          <h2>Modal Header</h2>
+        </div>
+        <div class="modal-body">
+          <p>Some text in the Modal Body</p>
+          <p>Some other text...</p>
+        </div>
+      </div>
+
+    </div>
   </div>
-<script>
-  alert('Đăng nhập bằng Google để tiếp tục')
-</script>
+  <script>
+    alert('Đăng nhập bằng Google để tiếp tục')
+    var modal = document.querySelector("#myModal");
+    console.log('modal', modal)
+    var btn = document.getElementById("myBtn");
+
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on the button, open the modal
+
+    chitiet = function (element) {
+      var parent = element.parentNode; // Get the parent element of the myBtn element
+      var image = parent.querySelector('img').getAttribute('src'); // Get the src attribute of the img element
+      var name = parent.querySelector('.lamborname').textContent; // Get the text content of the lamborname element
+      var price = parent.querySelector('.a23000').textContent; // Get the text content of the a23000 element
+      console.log(parent)
+      console.log(image)
+      console.log(name)
+      console.log(price)
+      modal.style.display = "block";
+      document.querySelector('.modal-body').innerHTML =
+        ` 
+  <img src=${image} alt="" />
+  <div>
+    <h4 > ${name}</h4> 
+  <h4> ${price} USD</h4> 
+  <h4>topSpeed : <p>217</p></h4>
+      <h4>horsepower :<p>700</p></h4>
+      <h4>acceleration :<p>2.9</p></h4>
+      <h4 >description :<p style="font-size: 12px;
+    color: #868686;
+    font-weight: 600;">The Lamborghini Aventador is a mid-engine sports car produced by the Italian automotive manufacturer Lamborghini.</p></h4>
+    </div>
+  
+  `
+    }
+
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+  <script src="./javascript/chitiet.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
