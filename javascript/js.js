@@ -12,3 +12,22 @@ lamborNames.forEach(function(lamborName) {
 
   lamborName.textContent = randomModel;
 });
+
+showmenu = (a) => {
+  if (a == '1') {
+    document.querySelector(`.subnav1`).classList.toggle("show");
+    document.querySelector(`.subnav2`).classList.remove("show");
+    document.querySelector(`.subnav3`).classList.remove("show");
+  } else if (a == '2') {
+    document.querySelector(`.subnav1`).classList.remove("show");
+    document.querySelector(`.subnav2`).classList.toggle("show");
+    document.querySelector(`.subnav3`).classList.remove("show");
+  } else if (a == '3') {
+    document.querySelector(`.subnav1`).classList.remove("show");
+    document.querySelector(`.subnav2`).classList.remove("show");
+    document.querySelector(`.subnav3`).classList.toggle("show");
+  }
+  // document.querySelectorAll(`.subnav`).forEach(e => {
+  //   let slides = document.querySelector(`.subnav${a}`).classList.toggle("show");
+  // })
+}
