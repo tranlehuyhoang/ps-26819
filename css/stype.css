@@ -1262,13 +1262,26 @@ img {}
   color      : rgb(0, 0, 0);
 }
 
-.modal-body h4:nth-child(6)> p {
-padding: 10px 0;
+.modal-body h4:nth-child(6)>p {
+  padding: 10px 0;
 }
+
 .w-20 {
   width: 10rem;
 }
 
 .h-20 {
-  height:10rem;
+  height: 10rem;
+}
+
+.nuthanhtoan {
+  height: 50px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:40px ;
+  padding: 0 10px;
+  font-size: 20px;
+  background-color: #0000005d;
 }

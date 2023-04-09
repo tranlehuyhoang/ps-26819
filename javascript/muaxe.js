@@ -17,7 +17,7 @@ hienxe = () => {
                     <div class="chutos">Shopping cart-list</div>
 
 
-                    <button onclick ="thanhtoan()"  style="float: right; display: flex; align-items: center; cursor: pointer; background: #0000005d; border: 0px; padding: 10px; border-radius: 50px;" class="thanhtoan cursorsHover">thanh
+                    <button onclick ="thanhtoan()" class="thanhtoan cursorsHover nuthanhtoan">thanh
                       toán</button>
                   </h3>
     `
@@ -90,8 +90,6 @@ thanhtoan = () => {
     taoSanpham(soluong, gia)
     gia = 0
     soluong = 0;
-    alert('Bấm vào Logo để xem thông tin')
-
 
 }
 taoSanpham = (soluong, gia) => {

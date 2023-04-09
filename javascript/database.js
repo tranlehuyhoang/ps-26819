@@ -25,7 +25,6 @@ function signIn() {
             console.log(user);
             userss.name = user.displayName;
             userss.photo = user.photoURL;
-            alert("Đăng nhập thành công!");
             localStorage.setItem('user', JSON.stringify(userss));
             document.querySelector('.g-signin2').innerHTML =
                 `
